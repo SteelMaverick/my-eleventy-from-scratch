@@ -1,0 +1,18 @@
+### Recommended by Project Creator Andy Bell ###
+
+# Misc
+## DO NOT REMOVE .cache as this project works with sensitive information!
+*.log
+npm-debug.*
+*.scssc
+*.swp
+.DS_Store
+Thumbs.db
+.sass-cache
+.env
+.cache
+
+# Node modules and output
+node_modules
+dist
+#src/_includes/css - Unsure why this is, commenting out for now
