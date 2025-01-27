@@ -1,6 +1,7 @@
 import { sortByDisplayOrder } from './src/utils/sort-by-display-order.js';
 import { dateFilter } from './src/filters/date-filter.js';
 import { w3DateFilter } from './src/filters/w3-date-filter.js';
+import rssPlugin from '@11ty/eleventy-plugin-rss';
 
 export default async function(eleventyConfig) {
 	// Configure Eleventy. ORDER MATTERS
@@ -16,6 +17,7 @@ export default async function(eleventyConfig) {
 
     eleventyConfig.addFilter('dateFilter', dateFilter);
     eleventyConfig.addFilter('w3DateFilter', w3DateFilter);
+    eleventyConfig.addPlugin(rssPlugin);
 
     /*eleventyConfig.addCollection("work", async (collection) => {
       return collection

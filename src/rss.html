@@ -1,0 +1,30 @@
+---
+title: 'Issue 33 Blog'
+summary: 'A feed of the latest posts from our blog.'
+permalink: '/feed.xml'
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ title }}</title>
+	<subtitle>{{ summary }}</subtitle>
+	<link href="{{ site.siteInfo.url }}{{ permalink }}" rel="self"/>
+	<link href="{{ site.siteInfo.url }}/"/>
+	<updated>{{ collections.blog | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+	<id>{{ site.siteInfo.url }}</id>
+	<author>
+    <name>{{ site.siteInfo.authorName }}</name>
+    <email>{{ site.siteInfo.authorEmail }}</email>
+	</author>
+	{% for post in collections.blog %}
+    {% set absolutePostUrl %}{{ site.siteInfo.url }}{{ post.url | url }}{% endset %}
+    <entry>
+      <title>{{ post.data.title }}</title>
+      <link href="{{ absolutePostUrl }}"/>
+      <updated>{{ post.date | dateToRfc3339 }}</updated>
+      <id>{{ absolutePostUrl }}</id>
+      <content type="html"><![CDATA[
+        {{ post.templateContent | safe }}
+      ]]></content>
+    </entry>
+	{% endfor %}
+</feed>

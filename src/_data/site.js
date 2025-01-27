@@ -1,7 +1,9 @@
 export const siteInfo = {
     name: "Issue 33",
     url: "https://issue33.com",
-    published: "Published on: "
+    published: "Published on: ",
+    authorName: "Issue 33",
+    authorEmail: "hi@piccalil.li"
 };
 
 
