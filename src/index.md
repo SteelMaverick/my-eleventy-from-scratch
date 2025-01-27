@@ -1,5 +1,6 @@
 ---js
 const title = "Issue 33"
+const metaDesc = 'A made up agency site that you build if you take Learn Eleventy From Scratch, by Piccalilli'
 const layout = "layouts/home.html"
 const updated = "Last Updated: "
 const intro = {
