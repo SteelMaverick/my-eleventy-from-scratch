@@ -13,7 +13,6 @@ The implementation of the course's website is different in that it isn't 100% co
 This website contains only the complete HTML component of the course up to lesson 17. No CSS is implemented here as I have decided not to use SASS. I eventually want to attempt re-writing the CSS component using CSS only due to the improvements it has made over the years and to have less dependency on packages and frameworks where possible.
 
 ## NodeJS Package Dependencies
----
 
 If you wish to render this website locally on your device, you will need to install the following NodeJS packages using `npm install`:
 
@@ -21,8 +20,9 @@ If you wish to render this website locally on your device, you will need to inst
 - Eleventy-fetch: `@11ty/eleventy-fetch`
 - Eleventy RSS plugin: `@11ty/eleventy-plugin-rss`
 
+You can check if you have these dependencies installed by using the command `npm ls --depth=0 (--global)`
+
 ## Private/Sensitive Data Notice
----
 
 **Sensitive Data Used**
 - IP Address
