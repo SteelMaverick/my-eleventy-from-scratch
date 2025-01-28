@@ -1,5 +1,7 @@
 export const layout = "layouts/work-item.html";
 
 export function currentDate() {
-	return (new Date()).toLocaleString();
+	const stringDate = new Date().toISOString();
+    const date = new Date(stringDate);
+	return (date);
 };

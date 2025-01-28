@@ -1,11 +1,12 @@
 ---js
 const title = "About Issue 33"
 const layout = "layouts/about.html"
-const updated = "Last Updated: "
 const permalink = "/about-us/index.html"
 
 function currentDate() {
-	return (new Date()).toLocaleString();
+	const stringDate = new Date().toISOString();
+    const date = new Date(stringDate);
+	return (date);
 }
 ---
 

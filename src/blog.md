@@ -1,7 +1,6 @@
 ---js
 const title = "The Issue 33 Blog"
 const layout = "layouts/feed.html"
-const updated = "Last Updated: "
 const pagination = {
   data: "collections.blog",
   size: 5
@@ -12,7 +11,9 @@ const paginationNextText = "Older posts"
 const paginationAnchor = "#post-list"
 
 function currentDate() {
-	return (new Date()).toLocaleString();
+	const stringDate = new Date().toISOString();
+    const date = new Date(stringDate);
+	return (date);
 }
 ---
 

@@ -10,6 +10,8 @@ const pagination = {
 const permalink = "/tag/{{ tag | slugify }}/"
 
 function currentDate() {
-	return (new Date()).toLocaleString();
+	const stringDate = new Date().toISOString();
+    const date = new Date(stringDate);
+	return (date);
 }
 ---

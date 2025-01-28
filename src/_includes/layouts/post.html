@@ -1,7 +1,6 @@
 {% extends "layouts/base.html" %}
 
 {% set pageHeaderTitle = title %}
-{% set locale = language %}
 
 {# Grab other posts that aren’t this one for the 'more from the blog' feed #}
 {% set recommendedPosts = helpers.urlChecker.getSiblingContent(collections.blog, page) %}

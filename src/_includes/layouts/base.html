@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+{% set locale = language %}
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,7 +13,7 @@
     <main tabindex="-1" id="main-content">{% block content %}{% endblock %}</main>
   </body>
   <footer>
-  <p><em>{{ site.siteInfo.published }}{{ site.publishedDate() }}</em></p>
-  <p><em>{{ updated }}{{ currentDate() }}</em></p>
+  <p><em>{{ site.siteInfo.published }}{{ site.publishedDate() | dateFilter(locale) }}</em></p>
+  <p><em>{{ site.siteInfo.updated }}{{ currentDate() | dateFilter(locale) }}</em></p>
   </footer>
 </html>

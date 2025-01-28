@@ -22,7 +22,18 @@ const ordinalDay = (number) => {
 };
 
 export const dateFilter = (value, locale) => {
-    const date = new Date(`${value}T00:00`);
+
+    let date;
+
+    if (Object.prototype.toString.call(value) !== "[object Date]")
+    {
+        date = new Date(`${value}T00:00`);
+    }
+    else
+    {
+        date = value;
+    }
+
     const year = date.getFullYear();
     const monthIndex = date.getMonth();
     const month = months[monthIndex];

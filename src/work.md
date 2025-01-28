@@ -3,7 +3,9 @@ const title = "Our finest work"
 const layout = "layouts/work-landing.html"
 
 function currentDate() {
-	return (new Date()).toLocaleString();
+	const stringDate = new Date().toISOString();
+    const date = new Date(stringDate);
+	return (date);
 }
 ---
 
