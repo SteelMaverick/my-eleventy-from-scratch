@@ -1,7 +1,7 @@
 ### Recommended by Project Creator Andy Bell ###
 
 # Misc
-## DO NOT REMOVE .cache as this project works with sensitive information!
+## DO NOT REMOVE: This site uses your IP address to help determine how it should format dates. This data is stored in the .cache folder
 *.log
 npm-debug.*
 *.scssc

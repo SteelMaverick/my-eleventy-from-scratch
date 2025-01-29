@@ -25,6 +25,7 @@ export const dateFilter = (value, locale) => {
 
     let date;
 
+    //value can either be a Date object or a String (latter is passed by posts)
     if (Object.prototype.toString.call(value) !== "[object Date]")
     {
         date = new Date(`${value}T00:00`);
