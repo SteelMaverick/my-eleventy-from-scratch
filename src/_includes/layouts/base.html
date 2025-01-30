@@ -11,9 +11,9 @@
   <body>
     {% include "partials/site-head.html" %}
     <main tabindex="-1" id="main-content">{% block content %}{% endblock %}</main>
+    <footer>
+      <p><em>{{ site.siteInfo.published }}{{ site.publishedDate() | dateFilter(locale) }}</em></p>
+      <p><em>{{ site.siteInfo.updated }}{{ currentDate() | dateFilter(locale) }}</em></p>
+    </footer>
   </body>
-  <footer>
-  <p><em>{{ site.siteInfo.published }}{{ site.publishedDate() | dateFilter(locale) }}</em></p>
-  <p><em>{{ site.siteInfo.updated }}{{ currentDate() | dateFilter(locale) }}</em></p>
-  </footer>
 </html>

@@ -14,22 +14,22 @@ export default async function(eleventyConfig) {
     eleventyConfig.addPlugin(rssPlugin);
 
     //Creates and returns a collection of work
-    eleventyConfig.addCollection("work", async (collection) => {
+    eleventyConfig.addCollection("work", collection => {
       return sortByDisplayOrder(collection.getFilteredByGlob('./src/work/*.md'));
     });
 
     //Creates and returns a collection of work that is set to be featured
-    eleventyConfig.addCollection("featuredWork", async (collection) => {
+    eleventyConfig.addCollection("featuredWork", collection => {
       return sortByDisplayOrder(collection.getFilteredByGlob('./src/work/*.md')).filter(x => x.data.featured);
     });
 
     //Creates and returns a collection of blog posts in reverse date order
-    eleventyConfig.addCollection("blog", async (collection) => {
+    eleventyConfig.addCollection("blog", collection => {
       return [...collection.getFilteredByGlob('./src/posts/*.md')].reverse();
     });
 
     //Creates and returns a collection of people ordered by file name (just a single integer)
-    eleventyConfig.addCollection("people", async (collection) => {
+    eleventyConfig.addCollection("people", collection => {
       return collection.getFilteredByGlob('./src/people/*.md').sort((a, b) => {
         return Number(a.fileSlug) > Number(b.fileSlug) ? 1: -1;
       });
