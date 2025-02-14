@@ -39,6 +39,5 @@ export default async function(eleventyConfig) {
 //Required as there are no callback method to eleventy's API for these configurations. Need to export a config object
 export const config = {
   markdownTemplateEngine: "njk", //Markdown files run through this template engine before becoming HTML
-  dataTemplateEngine: 'njk', //DEPRECATED? Don't see this config in Eleventy's configuration documentation
   htmlTemplateEngine: 'njk', //HTML runs through this template engine before becoming better? HTML
 };
